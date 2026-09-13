@@ -1,0 +1,4 @@
+[wsl2]
+memory=110GB
+processors=40
+vmIdleTimeout=86400000

@@ -1,0 +1,13 @@
+[Unit]
+Description=Qwen3.8-27B NVFP4 + DFlash + HiCache SGLang (GPU1+GPU2, port 8788, VISION config)
+After=network.target
+
+[Service]
+Type=simple
+User=dministrator
+ExecStart=/bin/bash /mnt/d/qwen38-dual3080/scripts/start-sglang-qwen38-fp4-dflash-test.sh 262144 262144 8788
+Restart=on-failure
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
